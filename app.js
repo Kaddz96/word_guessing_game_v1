@@ -55,12 +55,14 @@ function checkWin(){
     if (shownLetters.length === totalLetters.length){
         overlay.style.display = '';
         overlay.className = 'win';
-        title.textContent = 'YOU WON!'
+        title.textContent = 'YOU WON!';
+        startGame.style.display = 'none';
     }
     if (missed > 4){
         overlay.style.display = '';
         overlay.className = 'lose';
         title.textContent = 'YOU LOSE';
+        startGame.style.display = 'none';
     }
 }
 
