@@ -48,6 +48,7 @@ function checkLetter(button){
     return letter;
 }
 
+// Check if all the correct letters were chosen or if user guessed incorrect 5 times
 function checkWin(){
     const shownLetters = document.querySelectorAll('.show');
     const totalLetters = document.querySelectorAll('.letter');
@@ -68,6 +69,7 @@ startGame.addEventListener('click', () => {
     startGame.parentElement.style.display = 'none';
 });
 
+// Display if the letter clicked was correct or a miss
 buttons[0].addEventListener('click', (e) => {
     const btn = e.target;
     if (btn.tagName === 'BUTTON' && btn.className !== 'chosen'){
